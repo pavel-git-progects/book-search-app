@@ -1,0 +1,131 @@
+.header {
+    background-image: url('./assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 65%;
+}
+
+.title {
+    display: block;
+    color: #fff;
+    font-size: 60px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.searchBlock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.seacrhInputBlock {
+    display: flex;
+    background-color: #fff;
+    width: 35%;
+    border-radius: 5px;
+    border: 1px solid grey
+}
+
+.seacrhInput {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 25px;
+}
+
+.searchIcon {
+    height: 25px;
+    width: 25px;
+    margin: auto 10px;
+    cursor: pointer;
+}
+
+.sortingContainer {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: #fff;
+    font-size: 35px;
+}
+
+.select {
+    font-size: 25px;
+    margin-left: 10px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+/* Media Requests */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .header {
+        background-position: 0 0;
+    }
+    .title {
+        padding: 10px 0px;
+        font-size: 25px;
+    }
+    .seacrhInputBlock {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+    .header {
+        background-position: 0 0;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .seacrhInputBlock {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .sortingContainer {
+        width: auto;
+        justify-content: normal;
+        flex-direction: column;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .select {
+        margin-top: 5px;
+        font-size: 15px;
+        height: 20px;
+    }
+    .sortingItem {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+    .title {
+        padding-top: 35px;
+    }
+    .seacrhInputBlock {
+        width: 60%;
+    }
+    .sortingContainer {
+        font-size: 25px;
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
+    .select {
+        font-size: 20px;
+        height: 30px;
+    }
+    .sortingItem {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

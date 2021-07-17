@@ -1,0 +1,14 @@
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0095FF;
+    bottom: 3%;
+    left: 50%;
+    margin-left: -170px;
+    border-radius: 10px;
+    color: #fff;
+    width: 320px;
+    padding: 10px;
+}

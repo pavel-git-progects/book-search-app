@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import BooksPage from './components/booksPage/booksPage';
+import Footer from './components/footer/footer';
+import Header from './components/header/header';
+import BookPage from './components/bookPage/bookPage';
+
+import store from './redux/store'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux';
+
+
+const App: React.FC = () => {
+  // <ErrorComponent />
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route exact path='/' component={BooksPage} />
+            <Route path='/info/:id' component={BookPage} />
+          </Switch>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
